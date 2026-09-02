@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -13,9 +12,12 @@ export default function NotFound() {
       <p className="mt-3 text-muted-foreground">
         The slug may have been merged into another concept, or it never existed.
       </p>
-      <Button asChild className="mt-6">
-        <Link href="/">Back to the catalog</Link>
-      </Button>
+      <Link
+        href="/"
+        className="mt-6 inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground"
+      >
+        Back to the catalog
+      </Link>
     </div>
   );
 }

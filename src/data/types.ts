@@ -23,7 +23,8 @@ export type Category =
   | "Commerce"
   | "Desktop Utilities"
   | "Creative"
-  | "Data & AI";
+  | "Data & AI"
+  | "Finance";
 
 export type Source = {
   date: string;
