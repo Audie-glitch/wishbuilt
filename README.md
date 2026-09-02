@@ -14,6 +14,11 @@ npm run dev
 
 The app listens on [http://127.0.0.1:43177](http://127.0.0.1:43177).
 
+## Published
+
+- Live: [https://wishbuilt.pages.dev](https://wishbuilt.pages.dev)
+- Source: [https://github.com/Audie-glitch/wishbuilt](https://github.com/Audie-glitch/wishbuilt)
+
 ## Build a static site
 
 ```bash
