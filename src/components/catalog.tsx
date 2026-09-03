@@ -53,8 +53,14 @@ export function Catalog() {
           </Button>
         ))}
       </div>
-      <p className="mt-5 text-sm text-muted-foreground">
+      <p
+        className="mt-5 text-sm text-muted-foreground"
+        data-testid="result-count"
+        aria-live="polite"
+      >
         {visible.length} of {opportunities.length} published gaps
+        {query.trim() ? ` matching “${query.trim()}”` : ""}
+        {category !== "All" ? ` in ${category}` : ""}
       </p>
       {visible.length === 0 ? (
         <div className="mt-6 rounded-2xl border border-dashed p-10 text-center">

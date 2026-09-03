@@ -30,7 +30,7 @@ function FocusDemo({ op }: { op: Opportunity }) {
       {current ? (
         <div className="rounded-2xl border border-border bg-card p-8 text-center">
           <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            Only this
+            Only this · {index + 1} of {queue.length}
           </p>
           <h3 className="mt-3 font-[family-name:var(--font-newsreader)] text-3xl">
             {current}
@@ -39,7 +39,11 @@ function FocusDemo({ op }: { op: Opportunity }) {
             Everything else is hidden. Complete this, and the next blocked item
             promotes automatically.
           </p>
-          <Button className="mt-6" onClick={() => setIndex((i) => i + 1)}>
+          <Button
+            type="button"
+            className="mt-6"
+            onClick={() => setIndex((i) => i + 1)}
+          >
             Done — pull next
           </Button>
         </div>
@@ -497,7 +501,11 @@ function SocialDemo({ op }: { op: Opportunity }) {
           placeholder="Independent entry…"
         />
       </div>
-      <div className="sm:col-span-2 rounded-lg border bg-card p-4 text-sm">
+      <div
+        className="sm:col-span-2 rounded-lg border bg-card p-4 text-sm"
+        data-testid="match-status"
+        aria-live="polite"
+      >
         {match
           ? `Match revealed: ${yours}. Both sides entered it independently.`
           : `Held encrypted. ${op.concept.split(" ")[0]} stays hidden until both sides type the same thing.`}
