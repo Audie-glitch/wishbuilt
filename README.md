@@ -9,10 +9,11 @@ Each unique concept has its own page: the unmet need, the niche, how it could pa
 ```bash
 npm install
 npm test
-npm run dev
+npm run build
+npm start
 ```
 
-The app listens on [http://127.0.0.1:43177](http://127.0.0.1:43177).
+That serves the static export on [http://127.0.0.1:43177](http://127.0.0.1:43177). `npm run dev` is available for Next.js HMR, but the static preview matches production.
 
 ## Published
 
