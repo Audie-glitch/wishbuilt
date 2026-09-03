@@ -30,10 +30,12 @@ export function Catalog() {
           aria-label="Search opportunities"
         />
       </div>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter by category">
         <Button
+          type="button"
           size="sm"
           variant={category === "All" ? "default" : "outline"}
+          aria-pressed={category === "All"}
           onClick={() => setCategory("All")}
         >
           All
@@ -41,8 +43,10 @@ export function Catalog() {
         {categories.map((item) => (
           <Button
             key={item}
+            type="button"
             size="sm"
             variant={category === item ? "default" : "outline"}
+            aria-pressed={category === item}
             onClick={() => setCategory(item as Category)}
           >
             {item}

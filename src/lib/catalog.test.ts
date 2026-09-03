@@ -19,6 +19,8 @@ describe("filterOpportunities", () => {
 
   it("matches concept, need, and platform text", () => {
     const bookmark = filterOpportunities(opportunities, "bookmark", "All");
+    expect(bookmark.length).toBeGreaterThan(0);
+    expect(bookmark.length).toBeLessThan(opportunities.length);
     expect(bookmark.some((item) => item.slug === "universal-bookmark-hub")).toBe(
       true,
     );
